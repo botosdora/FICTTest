@@ -1,0 +1,78 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(56, 56, 56);
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  width: 10rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.header-cell {
+  flex: 1;
+  padding: 10px;
+  width: 10rem;
+  text-align: center;
+  font-size: 16px;
+}
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(56, 56, 56);
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: #000000;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.table-row:hover {
+  background-color: #9500ff;
+}
+
+.search-button {
+    width: 7rem;
+    padding: 6px;
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.enable-button {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 50%; 
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 1200px) and (min-width: 800px) {
+  .table {
+    max-width: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 800px) {
+  .table {
+    max-width: 100%;
+  }
+}
