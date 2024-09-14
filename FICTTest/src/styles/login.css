@@ -66,8 +66,10 @@ button:hover {
     color: white;
 }
 
-a {
+p {
     display: block;
     margin-top: 20px;
     margin-bottom: 10px;
+    text-decoration: underline;
+    cursor: pointer;
 }

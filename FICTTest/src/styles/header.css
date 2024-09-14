@@ -1,6 +1,6 @@
 header {
   background-color: black;
-  width: 100%;
+  width: 500px;
   height: 4rem;
   display: flex;
   justify-content: center;
@@ -12,12 +12,16 @@ header {
   
 }
 
-p {
+a {
   transition: transform 0.5s ease, font-weight .5s ease;
   font-size: medium;
+  text-decoration: none;
+  color:white;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-p:hover {
+a:hover {
   font-weight: bold;
   transform: scale(1.1);
 }

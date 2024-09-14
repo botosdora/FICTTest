@@ -3,10 +3,10 @@ import "./../styles/header.css"
 export default function Header() {
   return (
     <header>
-        <p>Login</p>
-        <p>Register</p>
-        <p>Users</p>
-        <p>Searches</p>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/users">Users</a>
+        <a href="/searches">Searches</a>
     </header>
   )
 }

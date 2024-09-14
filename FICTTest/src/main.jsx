@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from './components/MainLayout.jsx'
 import Login from './routes/Login.jsx';
-import './index.css'
 import Users from './routes/Users.jsx';
+import Register from './routes/Register.jsx';
+import './index.css' 
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />
 
+      },
+      {
+        path: "/register",
+        element: <Register />
       },
       {
         path: "/users",

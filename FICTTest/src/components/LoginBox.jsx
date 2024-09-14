@@ -15,7 +15,7 @@ export default function LoginBox() {
             <input type="password" id="password" name="password" required />
 
             <button type="submit">Log in</button>
-            <a href="">Or register here!</a>
+            <p>Or register here!</p>
           </form>
         </div>
       </div>

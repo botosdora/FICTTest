@@ -33,13 +33,12 @@
 .table-header {
   display: flex;
   flex-direction: row;
-  background-color: rgb(56, 56, 56);
-  border-radius: 1rem;
   margin-bottom: 10px;
   font-weight: bold;
   background-color: #000000;
   color: white;
   border-radius: 0.5rem;
+  border: 2px solid rgb(174, 0, 255);
 }
 
 .table-row:hover {
