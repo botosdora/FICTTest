@@ -25,3 +25,9 @@ a:hover {
   font-weight: bold;
   transform: scale(1.1);
 }
+
+.logout-button {
+  padding: 5px;
+  width: 80px;
+  margin: 0;
+}
