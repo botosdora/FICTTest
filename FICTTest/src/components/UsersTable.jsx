@@ -6,6 +6,7 @@ export default function UsersTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
+  const [isSearchVisible, setIsSearchVisible] = useState(true);
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -14,9 +15,7 @@ export default function UsersTable() {
     setUsers(users);
     setFilteredUsers(users);
 
-    const loggedInUser = users.find(
-      (user) => user.email === loggedInUserData
-    );
+    const loggedInUser = users.find((user) => user.email === loggedInUserData);
     setCurrentUser(loggedInUser);
   }, []);
 
@@ -41,11 +40,14 @@ export default function UsersTable() {
     setFilteredUsers(filtered);
 
     if (searchQuery.trim() !== "" && currentUser) {
-      const updatedUsers = users.map(user => {
+      const updatedUsers = users.map((user) => {
         if (user.email === currentUser.email) {
           return {
             ...user,
-            searchHistory: [...(user.searchHistory || []), { query: searchQuery, dateTime: currentDateTime }]
+            searchHistory: [
+              ...(user.searchHistory || []),
+              { query: searchQuery, dateTime: currentDateTime },
+            ],
           };
         }
         return user;
@@ -54,11 +56,17 @@ export default function UsersTable() {
       localStorage.setItem("users", JSON.stringify(updatedUsers));
       setUsers(updatedUsers);
     }
-  };
+  }
+
+  function toggleSearchRow() {
+    setIsSearchVisible((prevVisibility) => !prevVisibility);
+  }
 
   return (
     <div>
-      <button className="enable-button">Search</button>
+      <button className="enable-button" onClick={toggleSearchRow}>
+        {isSearchVisible ? "Hide search" : "Enable search"}
+      </button>
       <div className="table">
         <div className="table-header">
           <div className="header-cell">Nickname</div>
@@ -68,15 +76,23 @@ export default function UsersTable() {
           <div className="header-cell">Height (cm)</div>
           <div className="header-cell">Gender</div>
         </div>
-
-        <div className="table-row">
-          <div className="table-cell">
-            <form onSubmit={handleSearchSubmit} className="search-form">
-            <input type="text" value={searchQuery} onChange={handleSearch} placeholder="Looking for somebody?"/>
-            <button className="search-button" type="submit">Search user</button>
-            </form>
+        {isSearchVisible && (
+          <div className="table-row">
+            <div className="table-cell">
+              <form onSubmit={handleSearchSubmit} className="search-form">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearch}
+                  placeholder="Looking for somebody?"
+                />
+                <button className="search-button" type="submit">
+                  Search user
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
         {filteredUsers.length > 0 ? (
           filteredUsers.map((user, index) => (
             <div className="table-row" key={index}>
