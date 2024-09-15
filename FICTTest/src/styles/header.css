@@ -26,8 +26,9 @@ a:hover {
   transform: scale(1.1);
 }
 
-.logout-button {
+.logout-button{
   padding: 5px;
   width: 80px;
   margin: 0;
 }
+

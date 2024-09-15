@@ -8,25 +8,25 @@
   margin-bottom: 1.5rem;
   padding: 1rem;
   background-color: rgb(56, 56, 56);
-  border-radius: 5px;
+  border-radius: 1rem;
 }
 
 .expand-button {
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   padding: 0.5rem 1rem;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: none;
-  border-radius: 3px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .expand-button:hover {
-  background-color: #573e8d;
+  background-color: #9000ff;
 }
 
 .search-history {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .search-history p {

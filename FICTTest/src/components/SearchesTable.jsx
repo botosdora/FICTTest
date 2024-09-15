@@ -58,7 +58,7 @@ export default function SearchesTable() {
                   <div className="search-history">
                     {user.searchHistory.map((history, idx) => (
                       <p key={idx}>
-                        <strong>Query:</strong> {history.query} -{" "}
+                        <strong>Query:</strong> {history.query} •{" "}
                         <strong>Date:</strong> {history.dateTime}
                       </p>
                     ))}

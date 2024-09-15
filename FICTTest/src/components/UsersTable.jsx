@@ -6,7 +6,7 @@ export default function UsersTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
-  const [isSearchVisible, setIsSearchVisible] = useState(true);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
