@@ -9,5 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAu-gNbSEtOEXgT4jpRsW9v_Ed9FzKX0-g",
+        authDomain: "fict-3b1b9.firebaseapp.com",
+        projectId: "fict-3b1b9",
+        storageBucket: "fict-3b1b9.appspot.com",
+        messagingSenderId: "843084382564",
+        appId: "1:843084382564:web:b766f3d23170bd7359fa71"
+      };
+    
+
+      const app = initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

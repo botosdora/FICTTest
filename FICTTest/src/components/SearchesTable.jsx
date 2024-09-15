@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./../styles/searches.css";
+import "../styles/searches.css";
 
 export default function SearchesTable() {
   const [users, setUsers] = useState([]);

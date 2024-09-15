@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./../styles/register.css";
+import "../styles/register.css";
 
 export default function RegisterBox() {
   const [formData, setFormData] = useState({

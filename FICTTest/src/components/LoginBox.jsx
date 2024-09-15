@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./../styles/login.css";
+import "../styles/login.css";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginBox() {
