@@ -5,6 +5,7 @@ import MainLayout from './components/MainLayout.jsx'
 import Login from './routes/Login.jsx';
 import Users from './routes/Users.jsx';
 import './index.css' 
+import Searches from './routes/Searches.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
         element: <Users />
       },
       {
-        path: "/searches"
+        path: "/searches",
+        element: <Searches />
       }
 
     ]
